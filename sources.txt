@@ -11,6 +11,7 @@ C:\Users\lovan\Documents\S4\Projet_Md_Baovola\Gith\VelokanFinal\velonkanFinal\sr
 C:\Users\lovan\Documents\S4\Projet_Md_Baovola\Gith\VelokanFinal\velonkanFinal\src\main\java\org\example\controller\PenaliteController.java 
 C:\Users\lovan\Documents\S4\Projet_Md_Baovola\Gith\VelokanFinal\velonkanFinal\src\main\java\org\example\controller\PlatController.java 
 C:\Users\lovan\Documents\S4\Projet_Md_Baovola\Gith\VelokanFinal\velonkanFinal\src\main\java\org\example\controller\PosteController.java 
+C:\Users\lovan\Documents\S4\Projet_Md_Baovola\Gith\VelokanFinal\velonkanFinal\src\main\java\org\example\controller\PresenceController.java 
 C:\Users\lovan\Documents\S4\Projet_Md_Baovola\Gith\VelokanFinal\velonkanFinal\src\main\java\org\example\controller\RecommandationController.java 
 C:\Users\lovan\Documents\S4\Projet_Md_Baovola\Gith\VelokanFinal\velonkanFinal\src\main\java\org\example\controller\StockController.java 
 C:\Users\lovan\Documents\S4\Projet_Md_Baovola\Gith\VelokanFinal\velonkanFinal\src\main\java\org\example\controller\SuiviBeneficesRestController.java 
@@ -93,6 +94,7 @@ C:\Users\lovan\Documents\S4\Projet_Md_Baovola\Gith\VelokanFinal\velonkanFinal\sr
 C:\Users\lovan\Documents\S4\Projet_Md_Baovola\Gith\VelokanFinal\velonkanFinal\src\main\java\org\example\service\PenaliteService.java 
 C:\Users\lovan\Documents\S4\Projet_Md_Baovola\Gith\VelokanFinal\velonkanFinal\src\main\java\org\example\service\PlatService.java 
 C:\Users\lovan\Documents\S4\Projet_Md_Baovola\Gith\VelokanFinal\velonkanFinal\src\main\java\org\example\service\PosteService.java 
+C:\Users\lovan\Documents\S4\Projet_Md_Baovola\Gith\VelokanFinal\velonkanFinal\src\main\java\org\example\service\PresenceService.java 
 C:\Users\lovan\Documents\S4\Projet_Md_Baovola\Gith\VelokanFinal\velonkanFinal\src\main\java\org\example\service\PublicationPlatService.java 
 C:\Users\lovan\Documents\S4\Projet_Md_Baovola\Gith\VelokanFinal\velonkanFinal\src\main\java\org\example\service\RecommandationService.java 
 C:\Users\lovan\Documents\S4\Projet_Md_Baovola\Gith\VelokanFinal\velonkanFinal\src\main\java\org\example\service\StockService.java 

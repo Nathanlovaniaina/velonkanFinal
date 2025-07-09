@@ -45,7 +45,7 @@ public class CommandeRepositoryScript {
             String idStr = plat.get("id");
             String quantiteStr = plat.get("quantite");
             if (idStr == null || idStr.isEmpty() || quantiteStr == null || quantiteStr.isEmpty()) {
-                continue; // Ignore ce plat invalide
+                continue;
             }
             entityManager.createNativeQuery(insertDetail)
                 .setParameter("idCommande", commandeId)
@@ -54,10 +54,11 @@ public class CommandeRepositoryScript {
                 .executeUpdate();
         }
 
-        // 3. Insertion du statut initial "Prêt"
+        // 3. Insertion du statut initial "Prêt" avec tous les champs requis
         String insertStatut = """
-            INSERT INTO mvt_statut_livraison_commande (id_commande, id_statut, date_heure_modification)
-            VALUES (:idCommande, 1, NOW())
+            INSERT INTO mvt_statut_livraison_commande 
+                (id_commande, id_statut, date_heure_modification, statut)
+            VALUES (:idCommande, 1, NOW(), 1)
         """;
         
         entityManager.createNativeQuery(insertStatut)
@@ -67,7 +68,7 @@ public class CommandeRepositoryScript {
         // 4. Insertion de la facture
         String insertFacture = """
             INSERT INTO facture (id_commandes, id_entreprise, date_emission, montant_total, statut)
-            VALUES (:idCommandes, :idEntreprise, CURRENT_DATE, :montantTotal, 'En attente')
+            VALUES (:idCommandes, :idEntreprise, CURRENT_DATE, :montantTotal, 'Paye')
         """;
         
         entityManager.createNativeQuery(insertFacture)
@@ -76,8 +77,6 @@ public class CommandeRepositoryScript {
             .setParameter("montantTotal", prixTotal)
             .executeUpdate();
 
-
         return commandeId;
     }
-
 }

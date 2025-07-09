@@ -130,8 +130,8 @@ INSERT INTO entreprise (nom, adresse, latitude, longitude, geom, debut_date_cont
 ('Societe Epsilon', '654 Avenue Service', 14.7463, -17.4921, ST_SetSRID(ST_MakePoint(-17.4921, 14.7463), 4326), '2023-03-01', 'Almadies');
 
 INSERT INTO statut_livraison_commande (nom) VALUES
-('Pret a etre livre'),
-('En cours de livraison'),
+('Pret'),
+('En cours'),
 ('Livre'),
 ('Annule'),
 ('Retard');
