@@ -1,0 +1,233 @@
+/* taches_plat.css */
+:root {
+    --primary-color: #007e5d !important;
+    --secondary-color: #f8c828 !important;
+    --primary-light: #e6f2ef !important;
+    --secondary-light: #fef8e6 !important;
+    --dark-color: #2c3e50 !important;
+    --light-color: #f8f9fa !important;
+    --danger-color: #e74c3c !important;
+    --success-color: #2ecc71 !important;
+    --info-color: #3498db !important;
+}
+
+body {
+    font-family: 'Inter', sans-serif !important;
+    color: var(--dark-color) !important;
+    background-color: var(--primary-light) !important;
+}
+
+.container {
+    background: white !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05) !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 2rem !important;
+}
+
+h1 {
+    color: var(--primary-color) !important;
+    font-weight: 600 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+/* Header styling */
+.plat-header {
+    background-color: white !important;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 8px !important;
+    padding: 1rem 1.5rem !important;
+    transition: all 0.2s ease;
+}
+
+.plat-header:hover {
+    background-color: var(--secondary-light) !important;
+    border-color: var(--secondary-color) !important;
+}
+
+.plat-name {
+    color: var(--primary-color) !important;
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
+}
+
+.task-count {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    font-size: 0.75rem !important;
+    padding: 0.25rem 0.75rem !important;
+    border-radius: 50px !important;
+}
+
+/* Table styling */
+.taches-table {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+}
+
+.taches-table th {
+    background-color: var(--primary-light) !important;
+    color: var(--primary-color) !important;
+    font-weight: 600 !important;
+    padding: 1rem !important;
+    border-bottom: 2px solid var(--primary-color) !important;
+}
+
+.taches-table td {
+    padding: 1rem !important;
+    border-bottom: 1px solid #dee2e6 !important;
+    vertical-align: middle !important;
+}
+
+.taches-table tr:hover {
+    background-color: rgba(0, 126, 93, 0.05) !important;
+}
+
+/* Editable cells */
+.editable-cell {
+    padding: 0.5rem !important;
+    border-radius: 4px !important;
+    transition: all 0.2s ease;
+}
+
+.editable-cell:hover {
+    background-color: rgba(0, 126, 93, 0.1) !important;
+}
+
+.editable-cell:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(0, 126, 93, 0.25) !important;
+    background-color: white !important;
+}
+
+.editable-input {
+    width: 100% !important;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 4px !important;
+    padding: 0.5rem 0.75rem !important;
+    transition: all 0.2s ease;
+}
+
+.editable-input:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 0.25rem rgba(0, 126, 93, 0.25) !important;
+}
+
+/* Action buttons */
+.action-delete {
+    color: var(--danger-color) !important;
+    background-color: rgba(231, 76, 60, 0.1) !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 4px !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    transition: all 0.2s ease;
+}
+
+.action-delete:hover {
+    background-color: rgba(231, 76, 60, 0.2) !important;
+    color: var(--danger-color) !important;
+}
+
+/* Button styling */
+.btn {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: white !important;
+    padding: 0.75rem 1.5rem !important;
+    border-radius: 8px !important;
+    font-weight: 500 !important;
+    transition: all 0.2s ease;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    text-decoration: none !important;
+    margin: 0.5rem !important;
+}
+
+.btn:hover {
+    background-color: #006a4d !important;
+    border-color: #006a4d !important;
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+/* Message boxes */
+.message {
+    padding: 1rem !important;
+    border-radius: 8px !important;
+    margin-bottom: 1.5rem !important;
+    border-left: 4px solid var(--success-color) !important;
+    background-color: rgba(46, 204, 113, 0.1) !important;
+    color: var(--success-color) !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+}
+
+.message.error {
+    border-left-color: var(--danger-color) !important;
+    background-color: rgba(231, 76, 60, 0.1) !important;
+    color: var(--danger-color) !important;
+}
+
+/* Empty state */
+.empty-state {
+    text-align: center !important;
+    padding: 3rem !important;
+    color: #6c757d !important;
+}
+
+.empty-state i {
+    font-size: 3rem !important;
+    color: var(--primary-color) !important;
+    margin-bottom: 1rem !important;
+}
+
+.empty-state h3 {
+    color: var(--dark-color) !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.empty-state p {
+    color: #6c757d !important;
+    margin-bottom: 0 !important;
+}
+
+/* Search input */
+.search-input {
+    border: 1px solid #dee2e6 !important;
+    border-radius: 8px !important;
+    padding: 0.75rem 1rem !important;
+    transition: all 0.2s ease;
+}
+
+.search-input:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 0.25rem rgba(0, 126, 93, 0.25) !important;
+}
+
+/* Animation for toggle */
+.plat-toggle {
+    transition: transform 0.3s ease !important;
+}
+
+.plat-toggle.expanded {
+    transform: rotate(180deg) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem !important;
+    }
+    
+    .taches-table th, 
+    .taches-table td {
+        padding: 0.75rem !important;
+    }
+}
