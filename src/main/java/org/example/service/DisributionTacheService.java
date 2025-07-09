@@ -31,7 +31,7 @@ public class DisributionTacheService {
         MvtStatutTache mvt = new MvtStatutTache();
         mvt.setDistributionTache(distribution);
         mvt.setDateHeureModification(LocalDateTime.now());
-        mvt.setStatut(0);
+        mvt.setStatut(1);
         if(e==null) {
             throw new Exception("Employe inexistant");
         } 
@@ -43,7 +43,7 @@ public class DisributionTacheService {
             mvtStatutrepo.save(mvt);
         }
         else {
-            throw new Exception("Date invalide");
+            throw new Exception("Date invalide :"+distribution.getDateTache().toString());
         }
     }
 

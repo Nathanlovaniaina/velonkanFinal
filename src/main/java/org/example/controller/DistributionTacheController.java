@@ -110,6 +110,7 @@ public class DistributionTacheController {
         try {
             boolean hasTache = tacheId != null;
             boolean hasTachePlat = tachePlatId != null;
+            System.out.println("Date reçue: " + dateTache);
 
             if (hasTache && hasTachePlat) {
                 throw new IllegalArgumentException("Vous ne pouvez pas sélectionner une tâche manuelle ET une tâche de plat en même temps.");

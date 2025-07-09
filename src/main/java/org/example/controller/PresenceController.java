@@ -10,9 +10,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/presences")
@@ -42,9 +44,17 @@ public class PresenceController {
     }
 
     @PostMapping("/presence/save")
-    public String enregistrer(@ModelAttribute Presence presence) {
+    public String enregistrer(@RequestParam("id_emp") Integer id,
+                            Model model) {
+        
+        Optional<Employe> employeOpt = employeService.findById(id);
+        if(employeOpt.isPresent()){
+        Presence presence = new Presence();
+        presence.setEmploye(employeOpt.get());
+        presence.setDatePres(LocalDate.now());
         presenceService.save(presence);
-        return "redirect:/presences/presence/presence_list";
+        }
+        return "redirect:/presences/presence/list";
     }
 
     @GetMapping("/search")

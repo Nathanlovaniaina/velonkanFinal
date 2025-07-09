@@ -228,7 +228,6 @@ CREATE TABLE paiement_entreprise (
     mode_paiement VARCHAR(50)  
 );
 
-ALTER TABLE taches_plat ADD COLUMN ordre INTEGER;
 ALTER TABLE entreprise ADD COLUMN quartier VARCHAR(255);
 
 ALTER TABLE details_plat
@@ -242,3 +241,5 @@ ON DELETE CASCADE;
 
 ALTER TABLE penalite
 ALTER COLUMN pourcentage SET DEFAULT 0;
+
+ALTER TABLE mvt_statut_tache DROP CONSTRAINT mvt_statut_tache_statut_fkey;

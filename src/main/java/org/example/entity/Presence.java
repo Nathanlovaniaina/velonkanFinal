@@ -1,6 +1,8 @@
 package org.example.entity;
 
 import javax.persistence.*;
+
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -15,9 +17,16 @@ public class Presence {
     @JoinColumn(name = "id_emp", nullable = false)
     private Employe employe;
 
-    @Temporal(TemporalType.DATE)
     @Column(name = "date_pres")
-    private Date datePres;
+    private LocalDate datePres;
+
+    public LocalDate getDatePres() {
+        return datePres;
+    }
+
+    public void setDatePres(LocalDate datePres) {
+        this.datePres = datePres;
+    }
 
     // Getters / Setters
     public Integer getId() { return id; }
@@ -26,7 +35,4 @@ public class Presence {
 
     public void setEmploye(Employe employe) { this.employe = employe; }
 
-    public Date getDatePres() { return datePres; }
-
-    public void setDatePres(Date datePres) { this.datePres = datePres; }
 }

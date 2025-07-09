@@ -422,7 +422,7 @@
                                         </div>
 
                                         <!-- Actions -->
-                                        <div class="d-flex justify-content-end gap-2 mt-3">
+                                        <!-- <div class="d-flex justify-content-end gap-2 mt-3">
                                             <a href="edit/?id=${commande.id}" class="btn btn-primary btn-sm">
                                                 <i class="bi bi-pencil me-1"></i> Modifier
                                             </a>
@@ -431,7 +431,7 @@
                                                class="btn btn-danger btn-sm">
                                                 <i class="bi bi-trash me-1"></i> Supprimer
                                             </a>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </c:forEach>

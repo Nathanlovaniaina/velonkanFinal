@@ -12,11 +12,6 @@
                 Tableau de bord
             </li>
             <li class="sidebar-item">
-                <a class="sidebar-link" href="${pageContext.request.contextPath}/commandes/count">
-                    <span class="align-middle">Statistiques</span>
-                </a>
-            </li>
-            <li class="sidebar-item">
                 <a class="sidebar-link" href="${pageContext.request.contextPath}/suivi/recette">
                     <span class="align-middle">Recettes</span>
                 </a>
@@ -76,6 +71,11 @@
                 </a>
             </li>
             <li class="sidebar-item">
+                <a class="sidebar-link" href="${pageContext.request.contextPath}/taches/calendrier">
+                    <span class="align-middle">Assignation de tache</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
                 <a class="sidebar-link" href="${pageContext.request.contextPath}/taches_plat/">
                     <span class="align-middle">Modèles de tâches</span>
                 </a>
@@ -128,6 +128,11 @@
         <ul class="sidebar-nav">
             <li class="sidebar-header">
                 Ressources Humaines
+            </li>
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="${pageContext.request.contextPath}/presences/presence/list">
+                    <span class="align-middle">Présence</span>
+                </a>
             </li>
             <li class="sidebar-item">
                 <a class="sidebar-link" href="${pageContext.request.contextPath}/employe/">
