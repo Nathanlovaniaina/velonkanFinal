@@ -239,14 +239,6 @@
                                             <option value="0" ${selectedType == 0 ? "selected" : ""}>Sortie</option>
                                         </select>
                                     </div>
-                                    <div class="col-md-3">
-                                        <label class="form-label">Date début :</label>
-                                        <input type="date" name="debut" class="form-control" value="${dateDebut}" />
-                                    </div>
-                                    <div class="col-md-3">
-                                        <label class="form-label">Date fin :</label>
-                                        <input type="date" name="fin" class="form-control" value="${dateFin}" />
-                                    </div>
                                     <div class="col-md-3 d-flex align-items-end">
                                         <button type="submit" class="btn btn-primary">
                                             <i class="bi bi-funnel me-1"></i> Filtrer
@@ -276,7 +268,7 @@
                                                     <tr>
                                                         <td>${m.id}</td>
                                                         <td>${m.stock.composant.nom}</td>
-                                                        <td>${m.typeMvt}</td>
+                                                        <td>${m.typeMvt === 1 ? 'Entrée' : 'Sortie'}</td>
                                                         <td>${m.quantite}</td>
                                                         <td>${m.datePeremption}</td>
                                                     </tr>

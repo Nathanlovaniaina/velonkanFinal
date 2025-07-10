@@ -104,18 +104,16 @@ public class SuiviEtatCommandeController {
     }
 
 
-    @PostMapping("/livrer")
+    @PostMapping("/livraison")
     public String livrerCommande(@RequestParam("idCommande") int idCommande,
-                                 @RequestParam("statut") int statut,
-                                 @RequestParam(value = "dateHeure", required = false)
-                                 @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-                                 LocalDateTime dateHeure) {
+                                 @RequestParam("statut") int statut
+                                 ) {
         try {
             mvtLivraisonService.modifierStatutCommande(idCommande, statut);
         } catch (Exception e) {
             e.printStackTrace(); 
         }
 
-        return "redirect:/suivi?dateHeure=" + dateHeure;
+        return "redirect:/suivi";
     }
 }

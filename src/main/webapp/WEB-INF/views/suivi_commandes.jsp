@@ -221,18 +221,16 @@
 
                     <div style="display: flex; gap: 10px;">
                         <c:if test="${commande.livrable}">
-                            <form method="post" action="/livrer" style="margin: 0;">
-                                <input type="hidden" name="idCommande" value="${commande.id}" />
-                                <input type="hidden" name="statut" value="0" />
-                                <input type="hidden" name="dateHeure" value="${dateHeure}" />
-                                <button type="submit" class="btn-livrer">✅ Livrer</button>
+                            <form method="post" action="${pageContext.request.contextPath}/suivi/livraison" style="margin: 0;">
+                                <input type="hidden" name="idCommande" value="${commande.idCommande}" />
+                                <input type="hidden" name="statut" value="0" />\
+                                <button type="submit" class="btn-livrer">✅ Livrer </button>
                             </form>
                         </c:if>
                         <c:if test="${commande.lastStatut==1}">
-                            <form method="post" action="/livrer" style="margin: 0;">
-                                <input type="hidden" name="idCommande" value="${commande.id}" />
+                            <form method="post" action="${pageContext.request.contextPath}/suivi/livraison" style="margin: 0;">
+                                <input type="hidden" name="idCommande" value="${commande.idCommande}" />
                                 <input type="hidden" name="statut" value="1" />
-                                <input type="hidden" name="dateHeure" value="${dateHeure}" />
                                 <button type="submit" class="btn-terminer">✅ Terminer la Livraison</button>
                             </form>
                         </c:if>

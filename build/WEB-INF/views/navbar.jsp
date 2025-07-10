@@ -12,11 +12,6 @@
                 Tableau de bord
             </li>
             <li class="sidebar-item">
-                <a class="sidebar-link" href="${pageContext.request.contextPath}/commandes/count">
-                    <span class="align-middle">Statistiques</span>
-                </a>
-            </li>
-            <li class="sidebar-item">
                 <a class="sidebar-link" href="${pageContext.request.contextPath}/suivi/recette">
                     <span class="align-middle">Recettes</span>
                 </a>
