@@ -20,7 +20,7 @@ for /R %SRC% %%f in (*.java) do (
 
 rem === Compilation ===
 echo Compilation des fichiers Java...
-javac -encoding UTF-8 -source 17 -target 17 -cp "%LIB%\*" -d %OUT%\WEB-INF\classes @sources.txt
+javac -encoding UTF-8 --release 17 -cp "%LIB%\*" -d %OUT%\WEB-INF\classes @sources.txt
 
 if %ERRORLEVEL% neq 0 (
     echo Erreur de compilation.
@@ -55,4 +55,17 @@ cd ..
 
 echo WAR généré avec succès : VelonKan.war
 echo Vérifiez que application.properties est bien présent dans WEB-INF/classes
+
+set WAR_NAME=VelonKan.war
+set SOURCE_DIR=
+set DEST_DIR=C:\xampp\tomcat\webapps
+
+echo Copying %WAR_NAME% to %DEST_DIR% ...
+copy "%WAR_NAME%" "%DEST_DIR%\%WAR_NAME%" /Y
+
+if %ERRORLEVEL%==0 (
+    echo Deploy successful.
+) else (
+    echo Deploy failed.
+)
 pause

@@ -86,4 +86,8 @@ public class StockService {
         mvtRepo.save(mvt);
     }
 }
+
+    public List<Stock> findByComposantId(Integer composantId) {
+        return stockRepository.findByComposant_Id(composantId);
+    }
 }

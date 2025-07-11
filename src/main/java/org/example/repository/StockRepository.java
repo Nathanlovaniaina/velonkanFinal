@@ -9,4 +9,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface StockRepository extends JpaRepository<Stock, Long> {
+    List<Stock> findByComposant_Id(Integer composantId);
 }
